@@ -28,7 +28,7 @@ tgcrypto
 pycryptodome
 telegraph==2.2.0
 yt-dlp
-lexica-api==1.4.7
+lexica-api==1.6.0
 httpx==0.25.2
 lyricsgenius
 spotipy
