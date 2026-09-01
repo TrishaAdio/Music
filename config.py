@@ -123,3 +123,38 @@ if SUPPORT_CHAT:
         raise SystemExit(
             "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
         )
+
+
+
+# ---------------------------------------------------------------------------
+# fastdl - audio download engine
+# ---------------------------------------------------------------------------
+# Every setting below is optional. The defaults need no cookies, no API keys and
+# no manual setup, so leaving this whole block untouched is the expected case.
+# The engine reads these from the environment directly (see
+# BrandrdXMusic/core/fastdl/config.py); they are mirrored here for discoverability.
+
+# Order in which audio sources are tried. Unknown names are ignored.
+#   saavn      - JioSaavn, direct 320kbps CDN, no auth. Best for Indian music.
+#   soundcloud - covers Western tracks the JioSaavn catalogue lacks.
+#   innertube  - YouTube itself, keyless. Works only if the server IP is clean.
+#   custom     - your own resolver endpoints (FASTDL_CUSTOM_API).
+#   ytdlp      - last resort; this is the one that asks for cookies when blocked.
+FASTDL_PROVIDERS = getenv("FASTDL_PROVIDERS", "saavn,soundcloud,innertube,custom,ytdlp")
+
+# Stream the source URL straight into the voice chat instead of downloading
+# first. This is what makes playback start in about a second. Set to "false"
+# to force a download before playing.
+FASTDL_DIRECT_STREAM = getenv("FASTDL_DIRECT_STREAM", "true")
+
+# Minimum match confidence (0-140) before a track is accepted. Raise it if the
+# bot ever plays the wrong version; lower it if searches come back empty.
+FASTDL_MIN_MATCH_SCORE = getenv("FASTDL_MIN_MATCH_SCORE", "62")
+
+# Optional: your own resolver endpoints, space or comma separated.
+# Supports {id} and {query} placeholders, e.g.
+#   FASTDL_CUSTOM_API="https://my-api.example/dl?id={id}"
+FASTDL_CUSTOM_API = getenv("FASTDL_CUSTOM_API", "")
+
+# On-disk cache ceiling. The engine evicts least-recently-used files past this.
+FASTDL_CACHE_MAX_MB = getenv("FASTDL_CACHE_MAX_MB", "3072")

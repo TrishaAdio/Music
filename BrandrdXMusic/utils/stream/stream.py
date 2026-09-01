@@ -63,7 +63,7 @@ from BrandrdXMusic.utils.inline import (
 )
 from BrandrdXMusic.utils.pastebin import HottyBin
 from BrandrdXMusic.utils.stream.queue import put_queue, put_queue_index
-from youtubesearchpython.__future__ import VideosSearch
+from BrandrdXMusic.core.fastdl.compat import VideosSearch
 
 
 async def stream(

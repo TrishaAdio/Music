@@ -24,6 +24,8 @@ pykeyboard
 python-dotenv
 pyyaml==6.0.1
 tgcrypto
+# Required by the fastdl saavn provider (DES decrypt of the media url).
+pycryptodome
 telegraph==2.2.0
 yt-dlp
 lexica-api==1.4.7
@@ -35,6 +37,10 @@ youtube_search
 youtube-search-python
 googlesearch-python
 unidecode
+# youtube-search-python is now only a fallback: BrandrdXMusic.core.fastdl.compat
+# provides an API-compatible VideosSearch backed by keyless InnerTube. The
+# httpx==0.25.2 pin above exists because youtubesearchpython passes a `proxies`
+# kwarg that httpx removed in 0.28 - keep them pinned together or drop both.
 #git+https://github.com/joetats/youtube_search@master
 #git+https://github.com/alexmercerind/youtube-search-python@main
 https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip

@@ -3,7 +3,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineQueryResultPhoto,
 )
-from youtubesearchpython.__future__ import VideosSearch
+from BrandrdXMusic.core.fastdl.compat import VideosSearch
 
 from BrandrdXMusic import app
 from BrandrdXMusic.utils.inlinequery import answer
