@@ -1,0 +1,50 @@
+{
+  "name": "⛦ Brandrd X Music ⛦",
+  "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+  "logo": "https://te.legra.ph/file/62fa7c81c56c1ae31c844.jpg",
+  "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "music",
+    "pyrogram"
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from Botfather",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "Get a mongodb url from https://cloud.mongodb.com.",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Owner user ID",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Pyrogram String Session",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Log Group ID",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
