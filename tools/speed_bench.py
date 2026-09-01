@@ -28,23 +28,23 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 for _name, _path in (
-    ("BrandrdXMusic", os.path.join(ROOT, "BrandrdXMusic")),
-    ("BrandrdXMusic.core", os.path.join(ROOT, "BrandrdXMusic", "core")),
+    ("RioEra", os.path.join(ROOT, "RioEra")),
+    ("RioEra.core", os.path.join(ROOT, "RioEra", "core")),
 ):
     if _name not in sys.modules:
         _stub = types.ModuleType(_name)
         _stub.__path__ = [_path]  # type: ignore[attr-defined]
         sys.modules[_name] = _stub
-sys.modules["BrandrdXMusic"].LOGGER = lambda n: logging.getLogger(n)  # type: ignore
+sys.modules["RioEra"].LOGGER = lambda n: logging.getLogger(n)  # type: ignore
 
-from BrandrdXMusic.core.fastdl import (  # noqa: E402
+from RioEra.core.fastdl import (  # noqa: E402
     TrackRequest,
     close_session,
     fastdl_config,
     materialise,
     resolve,
 )
-from BrandrdXMusic.core.fastdl.cache import url_cache  # noqa: E402
+from RioEra.core.fastdl.cache import url_cache  # noqa: E402
 
 SONGS = [
     "kesariya",

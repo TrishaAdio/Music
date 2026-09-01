@@ -132,7 +132,7 @@ if SUPPORT_CHAT:
 # Every setting below is optional. The defaults need no cookies, no API keys and
 # no manual setup, so leaving this whole block untouched is the expected case.
 # The engine reads these from the environment directly (see
-# BrandrdXMusic/core/fastdl/config.py); they are mirrored here for discoverability.
+# RioEra/core/fastdl/config.py); they are mirrored here for discoverability.
 
 # Order in which audio sources are tried. Unknown names are ignored.
 #   saavn      - JioSaavn, direct 320kbps CDN, no auth. Best for Indian music.

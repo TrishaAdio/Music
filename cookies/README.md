@@ -1,6 +1,6 @@
 # This bot does not use YouTube cookies
 
-The audio engine (`BrandrdXMusic/core/fastdl`) never reads a cookie file. Sources
+The audio engine (`RioEra/core/fastdl`) never reads a cookie file. Sources
 are tried in order and the default ones need no credentials at all:
 
 | source | auth needed | notes |

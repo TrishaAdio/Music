@@ -19,20 +19,20 @@ import types
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-# Importing BrandrdXMusic normally boots the whole bot (pyrogram client, Mongo,
+# Importing RioEra normally boots the whole bot (pyrogram client, Mongo,
 # assistants). fastdl deliberately has no bot dependencies, so stub the parent
 # packages to load it in isolation. This is what lets the harness run on a bare
 # server with nothing configured.
 for name, path in (
-    ("BrandrdXMusic", os.path.join(ROOT, "BrandrdXMusic")),
-    ("BrandrdXMusic.core", os.path.join(ROOT, "BrandrdXMusic", "core")),
+    ("RioEra", os.path.join(ROOT, "RioEra")),
+    ("RioEra.core", os.path.join(ROOT, "RioEra", "core")),
 ):
     if name not in sys.modules:
         stub = types.ModuleType(name)
         stub.__path__ = [path]  # type: ignore[attr-defined]
         sys.modules[name] = stub
 
-from BrandrdXMusic.core.fastdl import (  # noqa: E402
+from RioEra.core.fastdl import (  # noqa: E402
     TrackRequest,
     close_session,
     fastdl_config,

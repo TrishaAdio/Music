@@ -37,7 +37,7 @@ youtube_search
 youtube-search-python
 googlesearch-python
 unidecode
-# youtube-search-python is now only a fallback: BrandrdXMusic.core.fastdl.compat
+# youtube-search-python is now only a fallback: RioEra.core.fastdl.compat
 # provides an API-compatible VideosSearch backed by keyless InnerTube. The
 # httpx==0.25.2 pin above exists because youtubesearchpython passes a `proxies`
 # kwarg that httpx removed in 0.28 - keep them pinned together or drop both.

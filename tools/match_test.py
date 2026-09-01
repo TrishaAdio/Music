@@ -12,7 +12,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "BrandrdXMusic", "core"))
+sys.path.insert(0, os.path.join(ROOT, "RioEra", "core"))
 
 from fastdl import match  # noqa: E402
 

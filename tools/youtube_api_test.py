@@ -28,20 +28,20 @@ os.environ.setdefault("OWNER_ID", "1")
 # Stub the bot package: the platform adapters only need `app` and `LOGGER`,
 # and booting the real thing would require Telegram and MongoDB.
 for _name, _path in (
-    ("BrandrdXMusic", os.path.join(ROOT, "BrandrdXMusic")),
-    ("BrandrdXMusic.core", os.path.join(ROOT, "BrandrdXMusic", "core")),
-    ("BrandrdXMusic.utils", os.path.join(ROOT, "BrandrdXMusic", "utils")),
+    ("RioEra", os.path.join(ROOT, "RioEra")),
+    ("RioEra.core", os.path.join(ROOT, "RioEra", "core")),
+    ("RioEra.utils", os.path.join(ROOT, "RioEra", "utils")),
 ):
     if _name not in sys.modules:
         _stub = types.ModuleType(_name)
         _stub.__path__ = [_path]  # type: ignore[attr-defined]
         sys.modules[_name] = _stub
 
-sys.modules["BrandrdXMusic"].app = types.SimpleNamespace(username="test")  # type: ignore
-sys.modules["BrandrdXMusic"].LOGGER = lambda name: logging.getLogger(name)  # type: ignore
+sys.modules["RioEra"].app = types.SimpleNamespace(username="test")  # type: ignore
+sys.modules["RioEra"].LOGGER = lambda name: logging.getLogger(name)  # type: ignore
 
-from BrandrdXMusic.core.fastdl import close_session  # noqa: E402
-from BrandrdXMusic.platforms.Youtube import YouTubeAPI  # noqa: E402
+from RioEra.core.fastdl import close_session  # noqa: E402
+from RioEra.platforms.Youtube import YouTubeAPI  # noqa: E402
 
 VIDEO_ID = "BddP6PYo2gs"      # Kesariya
 QUERY = "tum hi ho"
