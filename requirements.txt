@@ -9,7 +9,7 @@ hachoir
 heroku3
 motor
 gitpython
-pillow==9.5.0
+pillow==13.0.0
 pyrogram
 psutil
 wget
